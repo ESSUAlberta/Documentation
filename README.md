@@ -164,4 +164,10 @@ The command issued is as follows:
 
 Where `nohup` re-routes the output to a text file `nohup.out`, `yarn start` starts the node app on `port 5001` (as defined in `package.json`). The `&` at the end allows you to continue your ssh session with the rest of the command running in the background. You have to be in the project directory for this.
 
+If you want to quit the terminal or ssh session at this time but want the process to continue even after logging out, use the command
+
+`disown`
+
+once for each backgrounded task. 
+
 As of right now, the projects are held under a specific user's direcotry but these will later be moved to `/websites`
