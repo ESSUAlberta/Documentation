@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The ESS Website is hosted by an ENGG IT server. Engg IT's office can be found on the first floor of Donadeo ICE at 1-300. They have access to our DNS records and house the server locally. To add subdomains or edit any `A` or `CNAME` values, you must contact ENGG IT. You can also setup an account on their helpdesk by talking to them or sending them an email at [enggit@ualbert.ca](mailto:enggit@ualberta.ca).
+The ESS Website is hosted by an ENGG IT server. Engg IT's office can be found on the first floor of Donadeo ICE at 1-300. They have access to our DNS records and house the server locally. To add subdomains or edit any `A` or `CNAME` values, you must contact ENGG IT. You can also setup an account on their helpdesk by talking to them or sending them an email at [enggit@ualberta.ca](mailto:enggit@ualberta.ca).
 
 ## SSH
 
