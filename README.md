@@ -146,28 +146,36 @@ https://code.lengstorf.com/deploy-nodejs-ssl-digitalocean/
 
 ## Serving and Node
 
-ess.ualberta.ca is served to `port 5000` using `serve`.
+ess.ualberta.ca and beta.ess.ualberta.ca is served to `port 5000` and `port 5001` respectively using `serve`.
 
 The command issued is as follows:
 
-`sudo nohup serve -l 5000 &`
+`nohup serve -l <PORT NUMBER> &`
+
+e.g: 
+
+`nohup serve -l 5000 &`
+
+and
+
+`nohup serve -l 5001 &`
 
 Where `nohup` re-routes the output to a text file `nohup.out`, `serve` starts serving to `port 5000` using the argument `-l 5000`. The `&` at the end allows you to continue your ssh session with the rest of the command running in the background. This command needs to be run in the build folder under the project directory. To generate the build folder, use:
+
 `yarn build`
+
 in the project directory.
-
-beta.ess.ualbert.ca is currently a live React app running using `react-scripts`
-
-The command issued is as follows:
-
-`sudo nohup yarn start &`
-
-Where `nohup` re-routes the output to a text file `nohup.out`, `yarn start` starts the node app on `port 5001` (as defined in `package.json`). The `&` at the end allows you to continue your ssh session with the rest of the command running in the background. You have to be in the project directory for this.
 
 If you want to quit the terminal or ssh session at this time but want the process to continue even after logging out, use the command
 
 `disown`
 
-once for each backgrounded task. 
+once for each backgrounded task.
 
-As of right now, the projects are held under a specific user's direcotry but these will later be moved to `/websites`
+in general, these commands can be bundled into one line:
+
+`cd /home/momo/wp_ess/build; nohup serve -l 5001; cd -; cd /home/momo/ServerMeltdownTemporaryPage; nohup serve -l 5000; cd -;`
+
+(the `cd -` takes you back to your previous directory).
+
+As of right now, the projects are held under the user `momo`'s direcotry but these will later be moved to `/websites`
