@@ -1,0 +1,56 @@
+[
+	{
+		"_id": "AF4295FE-A3C2-4DE6-9401-592B983B2570",
+		"name": "2018",
+		"type": "folder",
+		"content": [
+			{
+				"_id": "DB8F5417-B6FF-4078-9921-2C51B3EA8AE5",
+				"name": "First Year Engg Retreat",
+				"type": "folder",
+				"content": [
+					{
+						"_id": "C2CF6825-0568-4629-BB7E-545D8575F77F",
+						"name": "DSC_0001.JPEG",
+						"type": "image",
+						"content": {
+							"src": "https://the.link.to/storage/bucket/url/file/DSC_0001.JPEG",
+							"width": 1000,
+							"height": 324
+						}
+					},
+					{
+						"_id": "A2A0D270-FC9D-470E-A507-F7B441532EDD",
+						"name": "DSC_0002.JPEG",
+						"type": "image",
+						"content": {
+							"src": "https://the.link.to/storage/bucket/url/file/DSC_0002.JPEG",
+							"width": 1000,
+							"height": 324
+						}
+					},
+					{
+						"_id": "19CDFDA2-A93D-4124-A00B-D21A1C57BC84",
+						"name": "DSC_0003.JPEG",
+						"type": "image",
+						"content": {
+							"src": "https://the.link.to/storage/bucket/url/file/DSC_0003.JPEG",
+							"width": 1000,
+							"height": 324
+						}
+					}
+				]
+			},
+			{
+				"_id": "97F38072-12CB-4626-87F7-DB50DF0B6486",
+				"name": "2018_ENGG_Family_Shot.png",
+				"type": "image",
+				"content": {
+					"src": "https://the.link.to/storage/bucket/url/file/2018_ENGG_Family_Shot.png",
+					"width": 1000,
+					"height": 324
+				}
+			}
+		]
+	}
+]
