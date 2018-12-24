@@ -1,0 +1,23 @@
+[
+    {
+        "_id": "7C25AF61-7ABD-4520-AB1E-E060D96E5F75",
+        "name": "Product1",
+        "price": "$0.00",
+        "img": "https://path.to.image/or/local1.png",
+        "description": "Irure eu cupidatat incididunt elit in consectetur tempor."
+    },
+    {
+        "_id": "7C25AF61-8080-4520-AB1E-E060D96E5F75",
+        "name": "Product2",
+        "price": "$0.00",
+        "img": "https://path.to.image/or/local2.png",
+        "description": "Irure eu cupidatat incididunt elit in consectetur tempor."
+    },
+    {
+        "_id": "7C25AF61-7ABD-9999-AB1E-E060D96E5F75",
+        "name": "Product3",
+        "price": "$0.00",
+        "img": "https://path.to.image/or/local3.png",
+        "description": "Irure eu cupidatat incididunt elit in consectetur tempor."
+    }
+]
