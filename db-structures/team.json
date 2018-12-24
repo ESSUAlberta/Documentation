@@ -1,0 +1,33 @@
+[
+    {
+        "_id": "E0ECFBC2-3BC2-4BE9-AC45-2C01292A2CB7",
+        "president": {
+            "position1name": {
+                "fname": "Joe",
+                "lname": "Smith",
+                "description": "Reprehenderit aliquip adipisicing aliquip aute nulla quis occaecat fugiat enim aute consequat nisi amet fugiat.",
+                "image" : "https://location.to.some/picture.png"
+            },
+            "position2name": {
+                "fname": "Daniel",
+                "lname": "Kors",
+                "description": "Reprehenderit aliquip adipisicing aliquip aute nulla quis occaecat fugiat enim aute consequat nisi amet fugiat.",
+                "image" : "https://location.to.some/picture.png"
+            }
+        },
+        "comms": {
+            "position3name": {
+                "fname": "Sarah",
+                "lname": "Jones",
+                "description": "Reprehenderit aliquip adipisicing aliquip aute nulla quis occaecat fugiat enim aute consequat nisi amet fugiat.",
+                "image" : "https://location.to.some/picture.png"
+            },
+            "position4name": {
+                "fname": "Kaitlyn",
+                "lname": "Cooper",
+                "description": "Reprehenderit aliquip adipisicing aliquip aute nulla quis occaecat fugiat enim aute consequat nisi amet fugiat.",
+                "image" : "https://location.to.some/picture.png"
+            }
+        }
+    }
+]
