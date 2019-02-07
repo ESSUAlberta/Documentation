@@ -90,13 +90,13 @@ The websites are served using `nginx`. The websites have their own domains (subd
 
         # Include the SSL configuration from cipherli.st
         include snippets/ssl-params.conf;
+        
+        root /websites/ess/build;
 
         location / {
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-NginX-Proxy true;
-            # listen to whatever is on localhost:5000
-            proxy_pass http://localhost:5000/;
             proxy_ssl_session_reuse off;
             proxy_set_header Host $http_host;
             proxy_cache_bypass $http_upgrade;
@@ -125,13 +125,13 @@ The websites are served using `nginx`. The websites have their own domains (subd
 
         # Include the SSL configuration from cipherli.st
         include snippets/ssl-params.conf;
+        
+        root /websites/beta/build;
 
         location / {
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-NginX-Proxy true;
-            # listen to whatever is on localhost:5001
-            proxy_pass http://localhost:5001/;
             proxy_ssl_session_reuse off;
             proxy_set_header Host $http_host;
             proxy_cache_bypass $http_upgrade;
@@ -146,36 +146,10 @@ https://code.lengstorf.com/deploy-nodejs-ssl-digitalocean/
 
 ## Serving and Node
 
-ess.ualberta.ca and beta.ess.ualberta.ca is served to `port 5000` and `port 5001` respectively using `serve`.
+We will be serving the website directly using `nginx` using the "root" directive resolving to `/websites/ess/build` and `/websites/beta/build` for the default and beta sites respectively. To update these - we will manually `git pull` followed by `yarn` followed by `yarn build` in the project directories which we need to update (`/websites/[ess,beta]`)
 
-The command issued is as follows:
+in the case of a server failure - revert to using the following configurations for nginx:
 
-`nohup serve -l <PORT NUMBER> &`
+`default` --> `/websites/temp/build`
 
-e.g: 
-
-`nohup serve -l 5000 &`
-
-and
-
-`nohup serve -l 5001 &`
-
-Where `nohup` re-routes the output to a text file `nohup.out`, `serve` starts serving to `port 5000` using the argument `-l 5000`. The `&` at the end allows you to continue your ssh session with the rest of the command running in the background. This command needs to be run in the build folder under the project directory. To generate the build folder, use:
-
-`yarn build`
-
-in the project directory.
-
-If you want to quit the terminal or ssh session at this time but want the process to continue even after logging out, use the command
-
-`disown`
-
-once for each backgrounded task.
-
-in general, these commands can be bundled into one line:
-
-`cd /home/momo/wp_ess/build; nohup serve -l 5001; cd -; cd /home/momo/ServerMeltdownTemporaryPage; nohup serve -l 5000; cd -;`
-
-(the `cd -` takes you back to your previous directory).
-
-As of right now, the projects are held under the user `momo`'s direcotry but these will later be moved to `/websites`
+`beta.ess.ualberta.ca` --> `/websites/ess/build`
